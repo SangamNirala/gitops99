@@ -2,12 +2,12 @@ FROM python:3.9
 
 WORKDIR /app
 
-COPY ./app
+COPY . /app
 
-RUN pip install --no-cache-dir -e.
+RUN pip install --no-cache-dir -e .
 
 EXPOSE 5000
 
 ENV FLASK_APP=application.py
 
-CMD["py"]
+CMD ["python" , "application.py"]
